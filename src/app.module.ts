@@ -25,7 +25,6 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { NotificationsModule } from './notifications/notifications.module';
 import { UserPreferencesModule } from './user-preferences/user-preferences.module';
-import { ResponseService } from './common/response/response.service';
 import { ApiKeyMiddleware } from './common/middleware/api-key.middleware'; // Assuming you have an API key middleware
 
 @Module({
