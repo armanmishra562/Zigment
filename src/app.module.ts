@@ -47,8 +47,6 @@ import { ApiKeyMiddleware } from './common/middleware/api-key.middleware'; // As
     NotificationsModule,
     UserPreferencesModule,
   ],
-  providers: [ResponseService],
-  exports: [ResponseService],
 })
 export class AppModule {
   configure(consumer: MiddlewareConsumer) {
