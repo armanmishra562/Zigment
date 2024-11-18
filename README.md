@@ -27,6 +27,9 @@ Author: Arman Kumar Mishra
 
 Email: armanmishra.sae.it@gmail.com
 
+## API DOCUMENTATION
+
+https://documenter.getpostman.com/view/39805087/2sAYBPoFhX
 
 ## Project setup
 
