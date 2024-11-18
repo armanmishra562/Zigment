@@ -1,0 +1,964 @@
+{
+	"info": {
+		"_postman_id": "fa1bd972-9b25-41fe-8dcf-64350bd46c35",
+		"name": "notification-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39805087"
+	},
+	"item": [
+		{
+			"name": "Create User Preferences",
+			"item": [
+				{
+					"name": "Post-userpreference",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"user1\",\r\n  \"email\": \"user1@example.com\",\r\n  \"preferences\": {\r\n    \"marketing\": true,\r\n    \"newsletter\": false,\r\n    \"updates\": true,\r\n    \"frequency\": \"weekly\",\r\n    \"channels\": {\r\n      \"email\": true,\r\n      \"sms\": false,\r\n      \"push\": true\r\n    }\r\n  },\r\n  \"timezone\": \"America/New_York\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zigment.onrender.com/api/preferences/",
+							"protocol": "https",
+							"host": [
+								"zigment",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"preferences",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Post-userpreference_output",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"userId\": \"user1\",\r\n  \"email\": \"user1@example.com\",\r\n  \"preferences\": {\r\n    \"marketing\": true,\r\n    \"newsletter\": false,\r\n    \"updates\": true,\r\n    \"frequency\": \"weekly\",\r\n    \"channels\": {\r\n      \"email\": true,\r\n      \"sms\": false,\r\n      \"push\": true\r\n    }\r\n  },\r\n  \"timezone\": \"America/New_York\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://zigment.onrender.com/api/preferences/",
+									"protocol": "https",
+									"host": [
+										"zigment",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"preferences",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 18 Nov 2024 10:45:47 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "250"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8e475f76cd5cf452-BOM"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19a-h2DPSJnuULnGY6TDlYI7nXwsmuE\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "rndr-id",
+									"value": "ff3bcaf1-477e-46a1"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 201,\n    \"message\": \"User preference created successfully\",\n    \"data\": {\n        \"userId\": \"user1\",\n        \"email\": \"user1@example.com\",\n        \"preferences\": {\n            \"marketing\": true,\n            \"newsletter\": false,\n            \"updates\": true,\n            \"frequency\": \"weekly\",\n            \"channels\": {\n                \"email\": true,\n                \"sms\": false,\n                \"push\": true\n            }\n        },\n        \"timezone\": \"America/New_York\",\n        \"_id\": \"673b1ada11919fb91fd29994\",\n        \"lastUpdated\": \"2024-11-18T10:45:46.849Z\",\n        \"createdAt\": \"2024-11-18T10:45:46.849Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get-userpreference",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://zigment.onrender.com/api/preferences/user1",
+							"protocol": "https",
+							"host": [
+								"zigment",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"preferences",
+								"user1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get-userpreference_output",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://zigment.onrender.com/api/preferences/user1",
+									"protocol": "https",
+									"host": [
+										"zigment",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"preferences",
+										"user1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 18 Nov 2024 10:46:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "257"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8e4760de3feef452-BOM"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19c-5e1ETZb8xYFNsfmasYLsvx7is5c\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "rndr-id",
+									"value": "9a0f76be-b1df-401a"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"User preference retrieved successfully\",\n    \"data\": {\n        \"preferences\": {\n            \"channels\": {\n                \"email\": true,\n                \"sms\": false,\n                \"push\": true\n            },\n            \"marketing\": true,\n            \"newsletter\": false,\n            \"updates\": true,\n            \"frequency\": \"weekly\"\n        },\n        \"_id\": \"673b1ada11919fb91fd29994\",\n        \"userId\": \"user1\",\n        \"email\": \"user1@example.com\",\n        \"timezone\": \"America/New_York\",\n        \"lastUpdated\": \"2024-11-18T10:45:46.849Z\",\n        \"createdAt\": \"2024-11-18T10:45:46.849Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Patch-userpreference",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"user1\",\r\n  \"email\": \"test1@example.com\",\r\n  \"preferences\": {\r\n    \"marketing\": true,\r\n    \"newsletter\": false,\r\n    \"updates\": true,\r\n    \"frequency\": \"weekly\",\r\n    \"channels\": {\r\n      \"email\": true,\r\n      \"sms\": false,\r\n      \"push\": true\r\n    }\r\n  },\r\n  \"timezone\": \"America/New_York\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zigment.onrender.com/api/preferences/user1",
+							"protocol": "https",
+							"host": [
+								"zigment",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"preferences",
+								"user1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Patch-userpreference_output",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"userId\": \"user1\",\r\n  \"email\": \"test1@example.com\",\r\n  \"preferences\": {\r\n    \"marketing\": true,\r\n    \"newsletter\": false,\r\n    \"updates\": true,\r\n    \"frequency\": \"weekly\",\r\n    \"channels\": {\r\n      \"email\": true,\r\n      \"sms\": false,\r\n      \"push\": true\r\n    }\r\n  },\r\n  \"timezone\": \"America/New_York\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://zigment.onrender.com/api/preferences/user1",
+									"protocol": "https",
+									"host": [
+										"zigment",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"preferences",
+										"user1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 18 Nov 2024 10:47:46 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "254"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8e47625f5d71f452-BOM"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19a-mQV061KnrPs85urWNEEkvv0c77Y\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "rndr-id",
+									"value": "66678d10-e3c6-4b67"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"User preference updated successfully\",\n    \"data\": {\n        \"preferences\": {\n            \"channels\": {\n                \"email\": true,\n                \"sms\": false,\n                \"push\": true\n            },\n            \"marketing\": true,\n            \"newsletter\": false,\n            \"updates\": true,\n            \"frequency\": \"weekly\"\n        },\n        \"_id\": \"673b1ada11919fb91fd29994\",\n        \"userId\": \"user1\",\n        \"email\": \"test1@example.com\",\n        \"timezone\": \"America/New_York\",\n        \"lastUpdated\": \"2024-11-18T10:45:46.849Z\",\n        \"createdAt\": \"2024-11-18T10:45:46.849Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "DEL-userpreference",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "x-api-key",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "arman12344",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zigment.onrender.com/api/preferences/user1",
+							"protocol": "https",
+							"host": [
+								"zigment",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"preferences",
+								"user1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DEL-userpreference_output",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://zigment.onrender.com/api/preferences/user1",
+									"protocol": "https",
+									"host": [
+										"zigment",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"preferences",
+										"user1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 18 Nov 2024 10:48:16 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8e47631a1d7df452-BOM"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"43-H/hKRJUSLIOMcSdy7D6MZRPKyXU\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "rndr-id",
+									"value": "11e638f2-a616-4fd5"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"User preference deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Send Notification",
+			"item": [
+				{
+					"name": "POST send-notification",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n  \"userId\": \"user123456\",\r\n\r\n  \"type\": \"marketing\",\r\n\r\n  \"channel\": \"email\",\r\n\r\n  \"content\": {\r\n\r\n    \"subject\": \"Special Offer\",\r\n\r\n    \"body\": \"Check out our latest deals!\"\r\n\r\n  }\r\n\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zigment.onrender.com/api/notifications/send",
+							"protocol": "https",
+							"host": [
+								"zigment",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"notifications",
+								"send"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "POST send-notification_output",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n  \"userId\": \"user123456\",\r\n\r\n  \"type\": \"marketing\",\r\n\r\n  \"channel\": \"email\",\r\n\r\n  \"content\": {\r\n\r\n    \"subject\": \"Special Offer\",\r\n\r\n    \"body\": \"Check out our latest deals!\"\r\n\r\n  }\r\n\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://zigment.onrender.com/api/notifications/send",
+									"protocol": "https",
+									"host": [
+										"zigment",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"notifications",
+										"send"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 18 Nov 2024 10:49:09 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "168"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8e476465ba8cf452-BOM"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"de-aGEy+wA/6yG6UHTcmNGOZ72NA3A\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "rndr-id",
+									"value": "d03548c7-e737-4fc1"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Notification sent successfully\",\n    \"data\": {\n        \"userId\": \"user123456\",\n        \"type\": \"marketing\",\n        \"channel\": \"email\",\n        \"status\": \"sent\",\n        \"sentAt\": \"2024-11-18T10:49:08.900Z\",\n        \"_id\": \"673b1ba411919fb91fd2999d\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get notification-log",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://zigment.onrender.com/api/notifications/user123456/logs",
+							"protocol": "https",
+							"host": [
+								"zigment",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"notifications",
+								"user123456",
+								"logs"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get notification-log_output",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://zigment.onrender.com/api/notifications/user123456/logs",
+									"protocol": "https",
+									"host": [
+										"zigment",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"notifications",
+										"user123456",
+										"logs"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 18 Nov 2024 10:49:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "306"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8e4764bd8b88f452-BOM"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21e-XGTduGuAHVNvlUIS0wZCC82vzPQ\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "rndr-id",
+									"value": "fb5340a6-dc3e-4568"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Notification logs retrieved successfully\",\n    \"data\": [\n        {\n            \"_id\": \"673b0273ab9906f0ed46d47b\",\n            \"userId\": \"user123456\",\n            \"type\": \"marketing\",\n            \"channel\": \"email\",\n            \"status\": \"sent\",\n            \"sentAt\": \"2024-11-18T09:01:39.604Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"673b125d41d0d762dd6b927e\",\n            \"userId\": \"user123456\",\n            \"type\": \"marketing\",\n            \"channel\": \"email\",\n            \"status\": \"sent\",\n            \"sentAt\": \"2024-11-18T10:09:33.194Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"673b1ba411919fb91fd2999d\",\n            \"userId\": \"user123456\",\n            \"type\": \"marketing\",\n            \"channel\": \"email\",\n            \"status\": \"sent\",\n            \"sentAt\": \"2024-11-18T10:49:08.900Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "GET notification stat",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://zigment.onrender.com/api/notifications/stats",
+							"protocol": "https",
+							"host": [
+								"zigment",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"notifications",
+								"stats"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET notification stat_output",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://zigment.onrender.com/api/notifications/stats",
+									"protocol": "https",
+									"host": [
+										"zigment",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"notifications",
+										"stats"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 18 Nov 2024 10:49:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "101"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "8e4765200901f452-BOM"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"74-KpX2esjJMGPeL3LMXbaEOkkM8j4\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "rndr-id",
+									"value": "5369810b-544b-4c00"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Notification statistics retrieved successfully\",\n    \"data\": {\n        \"total\": 6,\n        \"sent\": 6,\n        \"failed\": 0\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
