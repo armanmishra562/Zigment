@@ -24,6 +24,7 @@
 
 ## Description
 Author: Arman Kumar Mishra
+
 Email: armanmishra.sae.it@gmail.com
 
 
@@ -55,10 +56,13 @@ $ npm run test:cov
 
 ## Deployment
 Project deployed on Render.com
+
 [Link to Project] https://zigment.onrender.com
 
 ## Environment Variables
+
 API_KEYs
+
 MONGO_URL
 
 ## License
